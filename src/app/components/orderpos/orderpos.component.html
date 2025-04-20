@@ -1,0 +1,91 @@
+<section class="dashboard-pos-page content-main">
+    <div class="content-main-left">
+        <div class="order-filters">
+            <span class="header">Orders</span>
+            <span class="flex-blank-fill"></span>
+            <div class="order-types">
+                <label>Order Type</label>
+                <button type="button">All</button>
+                <button type="button">Dine In</button>
+                <button type="button">Take Away</button>
+                <button type="button">Delivery</button>
+            </div>
+            <div class="payment-status">
+                <label>Payment</label>
+                <button type="button">All</button>
+                <button type="button">Paid</button>
+                <button type="button">Unpaid</button>
+            </div>
+        </div>
+        <div class="order-items">
+          <!-- First Loop (3 On Hold Orders) -->
+          <div class="order-item-wrapper" *ngFor="let item of onHoldOrders">
+            <div class="order-item">
+              <div class="header">
+                <span class="number">#{{ item.number }}</span>
+                <span class="on-hold">On Hold</span>
+              </div>
+              <div class="content">
+                <span class="type">{{ item.type }}</span>
+                <span class="details">{{ item.details }}</span>
+                <span class="amount">Tk {{ item.amount }}</span>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Second Loop (15 Orders with Actions) -->
+          <div class="order-item-wrapper" *ngFor="let order of actionOrders; let i = index">
+            <div class="order-item">
+              <div class="header">
+                <span class="number">#{{ order.number }}</span>
+                <span class="time">{{ order.time }}</span>
+              </div>
+              <div class="content">
+                <span class="type">{{ order.type }}</span>
+                <span class="details">{{ order.details }}</span>
+                <span class="amount">Tk {{ order.amount }}</span>
+              </div>
+              <div class="footer">
+                <ng-container *ngIf="i % 2 === 0; else showPayButton">
+                  <span class="payment">Paid</span>
+                  <span class="flex-blank-fill"></span>
+                </ng-container>
+                <ng-template #showPayButton>
+                  <button class="pay-button" type="button">Pay</button>
+                </ng-template>
+        
+                <button class="modify-button" type="button" title="Modify">
+                  <i class="bi bi-pencil-fill"></i>
+                </button>
+                <button class="print-button" type="button" title="Print">
+                  <i class="bi bi-printer-fill"></i>
+                </button>
+                <button class="close-button" type="button" title="Close">
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    <div class="content-main-right">
+        <div class="order-summaries">
+            <div class="order-summary">
+                <label>Total Orders</label>
+                <span>50</span>
+            </div>
+            <div class="order-summary">
+                <label>Total Sales</label>
+                <span>Tk 9999</span>
+            </div>
+            <div class="order-summary">
+                <label>Orders in Progress</label>
+                <span>12</span>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" [routerLink]="['/orderplace']">
+      Go to Order Place
+    </button>
+</section>

@@ -1,0 +1,68 @@
+<section class="order-place-section">
+    <div class="col9-div">
+      <div
+        class="col9-div-btn-group"
+        role="group"
+        aria-label="Basic outlined example"
+        style="background-color: white; padding: 0.5rem;"
+      >
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Starters</a>
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Mains</a>
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Sides</a>
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Snacks</a>
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Beverages</a>
+      </div>
+  
+      <div class="container">
+       <app-menu></app-menu>
+      </div>
+    </div>
+  
+    <div class="col3-div">
+      <div class="" role="group" aria-label="Basic outlined example">
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Dine In</a>
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Take Away</a>
+        <a href="#" class="btn btn-outline-primary" role="button" data-bs-toggle="button" aria-pressed="true">Delivery</a>
+      </div>
+  
+      <div class="cart-list">
+        <app-cart></app-cart>
+      </div>
+  
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Discount Coupon"
+          aria-label="Discount Coupon"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn btn-success" type="button" id="button-addon2">Apply</button>
+      </div>
+  
+      <div>
+        <div class="d-flex justify-content-between">
+          <div><b>Discount</b></div>
+          <div>$0.00</div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div><b>Total</b></div>
+          <div>$120.00</div>
+        </div>
+      </div>
+  
+      <div class="container-fluid m-2">
+        <div class="row">
+          <button type="button" class="on-hold-button col">On Hold</button>
+          <button type="button" class="payment-button col" data-bs-toggle="modal" data-bs-target="#PaymentModal">
+            Payment
+          </button>
+        </div>
+        <div class="row">
+          <button type="button" class="place-order-button col">Place Order</button>
+          <button type="button" class="payment-completed col">Completed</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

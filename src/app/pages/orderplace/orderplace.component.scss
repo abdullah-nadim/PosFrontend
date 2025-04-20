@@ -1,0 +1,51 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.order-place-section {
+    @extend .d-flex, .flex-row, .flex-grow-1, .container-fluid;
+    min-height: 0;
+}
+.col9-div {
+    @extend .col-9, .overflow-y-scroll;
+    min-height: 0;
+
+    .col9-div-btn-group {
+        @extend /*.btn-group,*/ .mb-2, .sticky-top, .container-fluid;
+
+        .top-buttons {
+            @extend .btn, .btn-outline-secondary;
+        }
+    }
+
+    .item-cards-body {
+        @extend .row, .row-cols-1, .row-cols-sm-2, .row-cols-md-5, .g-3;
+    }
+}
+.col3-div {
+    @extend .col-3, .d-flex, .flex-column;
+
+    .cart-list {
+        @extend .flex-grow-1, .overflow-y-scroll;
+
+        .cart-list-table {
+            @extend .table, .table-striped;
+
+
+            > thead {
+                @extend .sticky-top;
+                z-index: 100 !important;
+            }
+        }
+    }
+}
+.on-hold-button {
+    @extend .btn, .btn-outline-secondary, .m-1;
+}
+.place-order-button {
+    @extend .btn, .btn-outline-primary, .m-1;
+}
+.payment-button {
+    @extend .btn, .btn-outline-secondary, .m-1;
+}
+.payment-completed {
+    @extend .btn, .btn-outline-primary, .m-1;
+}

@@ -1,0 +1,103 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+
+    main.layout-main {
+        /*@extend .container-fluid, .vh-100;*/
+        @extend .d-flex, .flex-column;
+        height: 100vh;
+        max-height: 100vh;
+
+        section.content-main {
+            @extend .d-flex, .flex-row, .flex-grow-1, .container-fluid;
+            min-height: 0;
+
+            .content-main-left {
+                @extend .col-9, .overflow-y-scroll, .overflow-x-hidden;
+                min-height: 0;
+            }
+
+            .content-main-right {
+                @extend .col-3, .d-flex, .flex-column;
+            }
+        }
+    }
+}
+
+.dashboard-pos-page {
+    .order-filters {
+        @extend .d-flex, .align-items-center, .mb-3, .pb-2, .border-bottom, .border-secondary;
+
+        .header {
+            @extend .h3;
+        }
+
+        button {
+            @extend .btn, .btn-outline-secondary;
+        }
+
+        .order-types, .payment-status {
+            @extend .ms-2;
+        }
+    }
+
+    .order-items {
+        @extend .row, .g-2;
+
+        .order-item-wrapper {
+            @extend .col-12, .col-sm-6, .col-md-4, .col-lg-3;
+        }
+
+        .order-item {
+            @extend .card;
+
+            .header, .content, .footer {
+                @extend .p-2, .d-flex;
+            }
+
+            .number, .details, .pay-button {
+                @extend .flex-grow-1;
+            }
+
+            .on-hold, .type, .payment {
+                @extend .badge, .text-bg-secondary, .me-2, .align-self-center;
+            }
+
+            .header {
+                @extend .card-header;
+
+                .number {
+                    @extend .h4;
+                }
+            }
+
+            .content {
+                @extend .card-body;
+            }
+
+            .footer {
+                @extend .card-footer;
+
+                button {
+                    @extend .btn, .btn-outline-secondary, .flex-shrink-1, .mx-1;
+                }
+
+                button.pay-button {
+                    @extend .btn-outline-primary;
+                }
+            }
+        }
+    }
+
+    .order-summaries {
+        @extend .px-2;
+
+        .order-summary {
+            @extend .card, .d-flex, .flex-row, .justify-content-between, .p-2, .mb-3;
+
+            span {
+                @extend .h1, .mb-0;
+            }
+        }
+    }
+}
