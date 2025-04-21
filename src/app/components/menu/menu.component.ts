@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
   foodItems = [
-    { name: 'Pasta', image: '../Assets/Images/food.jpg', price: 2.33 },
-    { name: 'Burger', image: '../Assets/Images/burger.jpg', price: 3.50 },
+    { name: 'Pasta', image: '../../../assets/Images/food.jpg', price: 2.33 },
+    { name: 'Burger', image: '../../../assets/Images/food.jpg', price: 3.50 },
     // ...
   ];
 }

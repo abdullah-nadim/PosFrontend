@@ -1,0 +1,70 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+nav.navigation-top {
+    @extend .navbar, .navbar-expand-lg, .bg-body-tertiary;
+
+    .navigation-div {
+        @extend .container-fluid;
+
+        .navigation-links {
+            @extend .collapse, .navbar-collapse;
+        }
+    }
+
+    .brand {
+        @extend .navbar-brand;
+    }
+
+    .links-toggler {
+        @extend .navbar-toggler;
+
+        > span {
+            @extend .navbar-toggler-icon;
+        }
+    }
+
+    .navigation-links-ul {
+        @extend .navbar-nav, .me-auto, .mb-2, .mb-sm-0;
+
+        .navigation-links-ul-li {
+            @extend .nav-item;
+
+            a {
+                @extend .nav-link;
+            }
+        }
+    }
+
+    .navigation-links {
+        @extend .collapse, .navbar-collapse;
+    }
+    /*#user-button-dropdown {
+        @extend .dropdown;
+
+        .user-button {
+            @extend .btn, .btn-primary, .dropdown-toggle, .rounded-circle;
+        }
+
+        .person-dropdown-menu {
+            @extend .dropdown-menu;
+
+            > li {
+                > a {
+                    @extend .dropdown-item;
+                }
+            }
+        }
+    }
+
+    .person-option {
+        @extend .dropdown-item;
+    }
+
+    .dropdown-toggle::after {
+        content: none;
+    }*/
+
+    .place-order {
+        @extend .btn, .btn-secondary;
+    }
+}

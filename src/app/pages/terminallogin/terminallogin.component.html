@@ -1,0 +1,33 @@
+<section class="terminal-login-page">
+    <form class="terminal-login-form" (submit)="signIn()">
+      <h2>Sign in to My POS Terminal</h2>
+  
+      <select class="form-select" [(ngModel)]="selectedUser" name="user" required>
+        <option [ngValue]="null" disabled selected>Select terminal user</option>
+        <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+      </select>
+  
+      <div class="pin-display d-flex justify-content-between my-3">
+        <div class="col" *ngFor="let digit of pinDisplay; let i = index">
+          <input type="text" maxlength="1" [value]="digit" disabled class="form-control text-center" />
+        </div>
+      </div>
+  
+      <div class="pin-digits row g-2">
+        <div class="col-4" *ngFor="let digit of digits">
+          <button type="button" class="btn btn-outline-primary w-100" (click)="enterDigit(digit)">{{ digit }}</button>
+        </div>
+  
+        <div class="col-4">
+          <button type="button" class="btn btn-outline-secondary w-100" (click)="enterDigit(0)">0</button>
+        </div>
+  
+        <div class="col-8">
+          <button type="button" class="btn btn-danger w-100" (click)="clearPin()">Clear</button>
+        </div>
+      </div>
+  
+      <button class="btn btn-success w-100 mt-4" type="submit">Sign in</button>
+    </form>
+  </section>
+  

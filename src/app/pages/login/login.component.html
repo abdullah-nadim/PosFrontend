@@ -1,0 +1,26 @@
+<section class="login-page">
+    <div class="left"></div>
+    <div class="right">
+        <form class="login-form">
+            <h2>Sign in to My POS</h2>
+            <div>
+                <label for="username" class="form-label">User name</label>
+                <input id="username" class="form-control">
+            </div>
+            <div>
+                <label for="password" class="form-label">Password</label>
+                <input id="password" class="form-control" type="password">
+            </div>
+            <a routerLink="/terminallogin" routerLinkActive="active" ariaCurrentWhenActive="page" class="login-button" type="button">Sign in</a>
+            <router-outlet></router-outlet>
+            <a class="forgot-password" href="#">Forgot Password?</a>
+            <div class="other-option">
+                <p>Or sign in with</p>
+                <button type="button"><i class="fab fa-facebook-f"></i></button>
+                <button type="button"><i class="fab fa-google"></i></button>
+                <button type="button"><i class="fab fa-twitter"></i></button>
+                <button type="button"><i class="fab fa-github"></i></button>
+            </div>
+        </form>
+    </div>
+</section>

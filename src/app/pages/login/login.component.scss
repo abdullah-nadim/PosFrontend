@@ -1,0 +1,52 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.login-page {
+    @extend .w-100, .d-flex;
+    height: 100vh;
+    min-height: 100vh;
+
+    .left {
+        @extend .col-6;
+        background-image: url(../../../assets/Images/login-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .right {
+        @extend .col-6, .d-flex, .justify-content-center;
+
+        form.login-form {
+            @extend .align-self-center, .col-6, .card, .p-5;
+
+            > div {
+                @extend .mb-2;
+            }
+
+            .login-button {
+                @extend .btn, .btn-primary, .d-block, .w-100, .my-2;
+            }
+
+            .forgot-password {
+                @extend .text-decoration-none, .text-reset;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .other-option {
+                @extend .text-center, .mt-4;
+
+                p {
+                    @extend .fw-bold, .text-body-secondary;
+                }
+
+                button {
+                    @extend .btn, .btn-outline-secondary, .rounded-circle, .mx-1;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+}
