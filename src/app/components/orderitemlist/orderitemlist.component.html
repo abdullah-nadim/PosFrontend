@@ -1,0 +1,18 @@
+<div class="orders-on-hold">
+    <div class="order-item-body" *ngFor="let order of orders">
+      <div class="order-item-header">
+        <h5 class="order-item-title">{{ order.title }}</h5>
+        <span class="order-item-qty">qty: {{ order.qty }}</span>
+        <span class="order-item-price">\${{ order.price }}</span>
+      </div>
+      <p class="order-item-details">
+        <ng-container *ngFor="let level of order.spiceLevels; let i = index">
+          <strong>spice level-</strong>{{ level }}<span *ngIf="i < order.spiceLevels.length - 1"> , </span>
+        </ng-container>
+      </p>
+      <span class="order-item-addons">
+        {{ order.addons.join(', ') }}
+      </span>
+    </div>
+  </div>
+  
