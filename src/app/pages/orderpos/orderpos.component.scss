@@ -8,19 +8,21 @@ body {
         height: 100vh;
         max-height: 100vh;
 
-        section.content-main {
-            @extend .d-flex, .flex-row, .flex-grow-1, .container-fluid;
-            min-height: 0;
+        
+    }
+}
 
-            .content-main-left {
-                @extend .col-9, .overflow-y-scroll, .overflow-x-hidden;
-                min-height: 0;
-            }
+section.content-main {
+    @extend .d-flex, .flex-row, .flex-grow-1, .container-fluid;
+    min-height: 0;
 
-            .content-main-right {
-                @extend .col-3, .d-flex, .flex-column;
-            }
-        }
+    .content-main-left {
+        @extend .col-9, .overflow-y-scroll, .overflow-x-hidden;
+        min-height: 0;
+    }
+
+    .content-main-right {
+        @extend .col-3, .d-flex, .flex-column;
     }
 }
 
