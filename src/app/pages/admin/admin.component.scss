@@ -1,0 +1,145 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.order-place-page {
+    .menu-filters {
+        @extend .d-flex, .align-items-center, .mb-3, .pb-2, .border-bottom, .border-secondary;
+
+        .header {
+            @extend .h3;
+        }
+
+        button {
+            @extend .btn, .btn-sm, .btn-outline-secondary;
+        }
+
+        .categories {
+            @extend .ms-2;
+        }
+    }
+
+    .menu-items {
+        @extend .row, .g-2;
+
+        .menu-item-wrapper {
+            @extend .col-12, .col-sm-6, .col-md-2;
+        }
+
+        .menu-item {
+            @extend .card;
+            cursor: pointer;
+
+            .menu-image {
+                @extend .card-img-top;
+            }
+
+            .content {
+                @extend .card-body, .p-2, .d-flex, .flex-column, .text-center;
+
+                label {
+                    @extend .fw-bold, .overflow-hidden;
+                    height: 3rem;
+                }
+
+                span {
+                    @extend .small;
+                }
+            }
+        }
+    }
+
+    .order-summaries {
+        @extend .m-2, .d-flex, .flex-column, .card, .p-2, .small;
+        min-height: 0;
+
+        .type, .customer, .order-items {
+            @extend .mb-1;
+        }
+
+        .type {
+            @extend .d-flex;
+
+            button {
+                @extend .col, .btn, .btn-sm, .btn-outline-secondary, .mx-1;
+            }
+        }
+
+        .order-items {
+            @extend .flex-grow-1, .overflow-y-scroll;
+        }
+
+        .order-items table, .order-total table {
+            @extend .table, .table-sm, .small;
+
+            tr td:last-child {
+                @extend .text-end;
+            }
+        }
+
+        .order-action {
+            @extend .d-flex, .flex-wrap, .justify-content-center;
+
+            button {
+                @extend .col-5, .btn, .btn-sm, .btn-outline-secondary, .m-1;
+            }
+        }
+
+
+
+        .order-summary {
+            @extend .card, .d-flex, .flex-row, .justify-content-between, .p-2, .mb-3;
+
+            span {
+                @extend .h1, .mb-0;
+            }
+        }
+    }
+}
+
+
+
+
+.order-place-section {
+    @extend .d-flex, .flex-row, .flex-grow-1, .container-fluid;
+    min-height: 0;
+}
+
+.col9-div {
+    @extend .col-9, .overflow-y-scroll;
+    min-height: 0;
+
+    .col9-div-btn-group {
+        @extend /*.btn-group,*/ .mb-2, .sticky-top, .container-fluid;
+        z-index: 100 !important;
+
+        .top-buttons {
+            @extend .btn, .btn-outline-secondary;
+        }
+    }
+
+    .item-cards-body {
+        @extend .row, .row-cols-1, .row-cols-sm-2, .row-cols-md-5, .g-3;
+    }
+}
+
+.col3-div {
+    @extend .col-3, .d-flex, .flex-column;
+
+    .cart-list {
+        @extend .flex-grow-1, .overflow-y-scroll;
+
+        .cart-list-table {
+            @extend .table, .table-striped;
+
+
+            > thead {
+                @extend .sticky-top;
+                z-index: 100 !important;
+            }
+        }
+    }
+}
+
+.left-column-inner-options {
+    @extend .list-group-item, .list-group-item-action;
+}

@@ -5,6 +5,7 @@ import { TerminalloginComponent } from './pages/terminallogin/terminallogin.comp
 import { LoginComponent } from './pages/login/login.component';
 import { OrderdetailsComponent } from './pages/orderdetails/orderdetails.component';
 import { OrderlistComponent } from './pages/orderlist/orderlist.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 export const routes: Routes = [
     { path: "orderplace", component: OrderplaceComponent },
@@ -12,6 +13,6 @@ export const routes: Routes = [
     { path: "terminallogin", component: TerminalloginComponent },
     { path: "", component: LoginComponent },
     { path: "orderdetails", component: OrderdetailsComponent },
-    { path: "orderlist", component: OrderlistComponent }
-    
+    { path: "orderlist", component: OrderlistComponent },
+    { path: "admin", component: AdminComponent }
 ];
