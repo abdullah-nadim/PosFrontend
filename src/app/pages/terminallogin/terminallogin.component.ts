@@ -38,8 +38,7 @@ export class TerminalloginComponent {
 
   signIn(): void {
     if (this.selectedUser && this.pin.length === 4) {
-      // Add authentication logic here if needed
-      this.router.navigate(['/DashboardPOS']);
+      this.router.navigate(['/orderpos']);
     } else {
       alert('Please select a user and enter a 4-digit PIN');
     }
