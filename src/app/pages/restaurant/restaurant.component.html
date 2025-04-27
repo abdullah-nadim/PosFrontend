@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Restaurant List</h2>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <ul *ngIf="restaurants.length > 0; else noRestaurants">
+      <li *ngFor="let restaurant of restaurants">
+        {{ restaurant.name }} - {{ restaurant.location }}
+      </li>
+    </ul>
+  
+    <ng-template #noRestaurants>
+      <p>No restaurants available.</p>
+    </ng-template>
+  </div>
+  

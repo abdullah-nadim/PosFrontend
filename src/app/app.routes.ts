@@ -5,6 +5,10 @@ import { TerminalloginComponent } from './pages/terminallogin/terminallogin.comp
 import { LoginComponent } from './pages/login/login.component';
 import { OrderdetailsComponent } from './pages/orderdetails/orderdetails.component';
 import { OrderlistComponent } from './pages/orderlist/orderlist.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { RestaurantComponent } from './pages/restaurant/restaurant.component';
+import { CreateRestaurantComponent } from './pages/create-restaurant/create-restaurant.component';
+import { NotificationListComponent } from './NotificationList';
 
 export const routes: Routes = [
     { path: "orderplace", component: OrderplaceComponent },
@@ -12,6 +16,9 @@ export const routes: Routes = [
     { path: "terminallogin", component: TerminalloginComponent },
     { path: "", component: LoginComponent },
     { path: "orderdetails", component: OrderdetailsComponent },
-    { path: "orderlist", component: OrderlistComponent }
-    
+    { path: "orderlist", component: OrderlistComponent },
+    { path: "admin", component: AdminComponent },
+    { path: "restaurant", component : RestaurantComponent},
+    { path: "create", component : CreateRestaurantComponent},
+    { path: "Notifications", component : NotificationListComponent}
 ];

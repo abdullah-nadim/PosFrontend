@@ -23,6 +23,7 @@
     "@angular/ssr": "^18.2.18",
     "bootstrap": "^5.3.5",
     "express": "^4.18.2",
+    "ng-event-bus": "^7.0.1",
     "order-pos-frontend": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

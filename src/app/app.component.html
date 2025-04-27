@@ -5,11 +5,13 @@
           <button class="links-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class=""></span>
           </button>
-          <div id="links-pos" class="navigation-links collapse navbar-collapse" style="">
+          <div id="links-pos" class="navigation-links collapse navbar-collapse" >
               <ul class="navigation-links-ul">
                   <li class="navigation-links-ul-li"><a routerLink="/orderpos" routerLinkActive="active" ariaCurrentWhenActive="page">Terminal Dashboard</a></li>
                   <li class="navigation-links-ul-li"><a routerLink="/orderlist" routerLinkActive="active" ariaCurrentWhenActive="page">Orders</a></li>
                   <li class="navigation-links-ul-li"> <a routerLink="/orderplace" routerLinkActive="active" ariaCurrentWhenActive="page">Place Order</a></li>
+                  <app-notification-list></app-notification-list>
+                  <app-loading style="display: block !important"></app-loading>
                   <ul class="navigation-links-ul" style="text-decoration-line: underline;">
                       <li class="nav-item dropdown">
                           <button class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">POS Log In/ Log Out</button>
